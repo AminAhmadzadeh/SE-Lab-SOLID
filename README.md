@@ -317,12 +317,15 @@ Liskov Substitution Principle
 </tr>
 <tr>
 <td width="168">
+ISP
 <p>&nbsp;</p>
 </td>
 <td width="246">
+گذاشتن توابع در اینترفیس Message که به همه مربوط نمیشود
 <p>&nbsp;</p>
 </td>
 <td width="284">
+میتوانیم اینترفیس ها را از هم جدا کنیم تا هر سرویس اینترفیس خود را پیاده سازی کنند. میتوانیم یک تابع sendMessage کلی برای همه بذاریم و هرکس sendMessage خود را پیاده سازی کند
 <p>&nbsp;</p>
 </td>
 </tr>
