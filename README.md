@@ -43,50 +43,99 @@
 
 <tr>
 <td width="64">
-<p><strong>&nbsp;</strong></p>
+<p><strong>۲</strong></p>
 </td>
 <td width="198">
-<p>&nbsp;</p>
+<p>TelegramMessage</p>
 </td>
 <td width="141">
-<p>&nbsp;</p>
+<p>افزودن کلاس پیام تلگرام</p>
 </td>
 <td width="292">
-<p>&nbsp;</p>
+<p>با فیلدهای آی دی و شماره موبایل برای source و target</p>
 </td>
 </tr>
+
+
 <tr>
 <td width="64">
-<p><strong>&nbsp;</strong></p>
+<p><strong>۳</strong></p>
 </td>
 <td width="198">
-<p>&nbsp;</p>
+<p>TelegramMessageService</p>
 </td>
 <td width="141">
-<p>&nbsp;</p>
+<p>افزودن کلاس سرویس پیام تلگرام</p>
 </td>
 <td width="292">
-<p>&nbsp;</p>
+<p>ارث بری از واسط MessageService و پیاده سازی متودهای آن</p>
 </td>
 </tr>
+
+
 <tr>
 <td width="64">
-<p><strong>&nbsp;</strong></p>
+<p><strong>۴</strong></p>
 </td>
 <td width="198">
-<p>&nbsp;</p>
+<p>EmailMessageService و SmsMessageService </p>
 </td>
 <td width="141">
-<p>&nbsp;</p>
+<p>افزودن متود sendTelegramMessage</p>
 </td>
 <td width="292">
-<p>&nbsp;</p>
+<p>پیاده سازی متود جدید با empty body</p>
+</td>
+</tr>
+
+<tr>
+<td width="64">
+<p><strong>۵</strong></p>
+</td>
+<td width="198">
+<p>TelegramMessageService</p>
+</td>
+<td width="141">
+<p>افزودن متود sendTelegramMessage و validateTelegramId و validatePhoneNumber</p>
+</td>
+<td width="292">
+<p>پیاده سازی متودهای صحت سنجی شماره موبایل و آی دی و استفاده در عملیات ارسال پیام تلگرام</p>
+</td>
+</tr>
+
+<tr>
+<td width="64">
+<p><strong>۶</strong></p>
+</td>
+<td width="198">
+<p>Main</p>
+</td>
+<td width="141">
+<p>اضافه کردن گزینه ارسال پیام تلگرام</p>
+</td>
+<td width="292">
+<p>پیاده سازی کیس جدید برای دریافت شماره موبایل یا آی دی تلگرام برای ارسال پیام</p>
+</td>
+</tr>
+
+<tr>
+<td width="64">
+<p><strong>۷</strong></p>
+</td>
+<td width="198">
+<p>Main</p>
+</td>
+<td width="141">
+<p>اضافه کردن بررسی کلاس TelegramMessageService</p>
+</td>
+<td width="292">
+<p>بررسی با instanceof</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-مجموع تعداد تغییرات: ..............
+مجموع تعداد تغییرات: ۷
 
 ### گام ۲: تحلیل و وارسی برنامه از منظر تحقق و یا عدم تحقق اصول SOLID
 در خصوص این برنامه‌ای که نوشته شده بود و شما یک قابلیت به آن اضافه کردید، بر اساس اصول SOLID موارد نقض و یا محقق شدن هر کدام از آن اصول را بیان کنید. در بیان موارد تحقق و نقض، علت تحقق و یا نقض را نیز به صورت کامل توضیح دهید:
