@@ -1,7 +1,6 @@
 package com.se_lab.solid.edu.sharif.selab.services;
 
-import com.se_lab.solid.edu.sharif.selab.models.EmailMessage;
-import com.se_lab.solid.edu.sharif.selab.models.SmsMessage;
+import com.se_lab.solid.edu.sharif.selab.models.Message;
 import com.se_lab.solid.edu.sharif.selab.models.TelegramMessage;
 
 import java.util.Objects;
@@ -10,17 +9,8 @@ import java.util.regex.Pattern;
 public class TelegramMessageService implements MessageService{
 
     @Override
-    public void sendSmsMessage(SmsMessage smsMessage) {
-        //Empty Body
-    }
-
-    @Override
-    public void sendEmailMessage(EmailMessage emailMessage) {
-        //Empty Body
-    }
-
-    @Override
-    public void sendTelegramMessage(TelegramMessage telegramMessage) {
+    public void sendMessage(Message message) {
+        TelegramMessage telegramMessage = (TelegramMessage) message;
         if (Objects.nonNull(telegramMessage.getSourceId())
                 && Objects.nonNull(telegramMessage.getTargetId())) {
             if(validateTelegramId(telegramMessage.getSourceId())

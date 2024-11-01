@@ -1,25 +1,15 @@
 package com.se_lab.solid.edu.sharif.selab.services;
 
 import com.se_lab.solid.edu.sharif.selab.models.EmailMessage;
-import com.se_lab.solid.edu.sharif.selab.models.SmsMessage;
-import com.se_lab.solid.edu.sharif.selab.models.TelegramMessage;
+import com.se_lab.solid.edu.sharif.selab.models.Message;
 
 import java.util.regex.Pattern;
 
 public class EmailMessageService implements MessageService{
 
     @Override
-    public void sendSmsMessage(SmsMessage smsMessage) {
-        //Empty Body
-    }
-
-    @Override
-    public void sendTelegramMessage(TelegramMessage telegramMessage) {
-        //Empty Body
-    }
-
-    @Override
-    public void sendEmailMessage(EmailMessage emailMessage) {
+    public void sendMessage(Message message) {
+        EmailMessage emailMessage = (EmailMessage) message;
         if(validateEmailAddress(emailMessage.getSourceEmailAddress()) && validateEmailAddress(emailMessage.getTargetEmailAddress())){
             System.out.println("Sending a SMS from " + emailMessage.getSourceEmailAddress() + " to " + emailMessage.getTargetEmailAddress() + " with content : " + emailMessage.getContent());
         }else{
