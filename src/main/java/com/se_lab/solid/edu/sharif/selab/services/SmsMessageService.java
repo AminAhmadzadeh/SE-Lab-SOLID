@@ -3,6 +3,7 @@ package com.se_lab.solid.edu.sharif.selab.services;
 
 import com.se_lab.solid.edu.sharif.selab.models.EmailMessage;
 import com.se_lab.solid.edu.sharif.selab.models.SmsMessage;
+import com.se_lab.solid.edu.sharif.selab.models.TelegramMessage;
 
 public class SmsMessageService implements MessageService{
     @Override
@@ -16,6 +17,11 @@ public class SmsMessageService implements MessageService{
 
     @Override
     public void sendEmailMessage(EmailMessage emailMessage) {
+        //Empty Body!
+    }
+
+    @Override
+    public void sendTelegramMessage(TelegramMessage telegramMessage) {
         //Empty Body!
     }
 

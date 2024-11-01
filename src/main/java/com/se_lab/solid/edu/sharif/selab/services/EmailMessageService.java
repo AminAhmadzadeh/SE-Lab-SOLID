@@ -2,12 +2,19 @@ package com.se_lab.solid.edu.sharif.selab.services;
 
 import com.se_lab.solid.edu.sharif.selab.models.EmailMessage;
 import com.se_lab.solid.edu.sharif.selab.models.SmsMessage;
+import com.se_lab.solid.edu.sharif.selab.models.TelegramMessage;
 
 import java.util.regex.Pattern;
 
 public class EmailMessageService implements MessageService{
+
     @Override
     public void sendSmsMessage(SmsMessage smsMessage) {
+        //Empty Body
+    }
+
+    @Override
+    public void sendTelegramMessage(TelegramMessage telegramMessage) {
         //Empty Body
     }
 
@@ -19,6 +26,8 @@ public class EmailMessageService implements MessageService{
             throw new IllegalArgumentException("Email Address is Not Correct!");
         }
     }
+
+
 
     public boolean validateEmailAddress(String email) {
         // Regular expression pattern for validating email addresses
