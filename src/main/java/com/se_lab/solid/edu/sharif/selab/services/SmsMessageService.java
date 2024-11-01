@@ -1,28 +1,18 @@
 package com.se_lab.solid.edu.sharif.selab.services;
 
 
-import com.se_lab.solid.edu.sharif.selab.models.EmailMessage;
+import com.se_lab.solid.edu.sharif.selab.models.Message;
 import com.se_lab.solid.edu.sharif.selab.models.SmsMessage;
-import com.se_lab.solid.edu.sharif.selab.models.TelegramMessage;
 
 public class SmsMessageService implements MessageService{
     @Override
-    public void sendSmsMessage(SmsMessage smsMessage) {
+    public void sendMessage(Message message) {
+        SmsMessage smsMessage = (SmsMessage) message;
         if(validatePhoneNumber(smsMessage.getSourcePhoneNumber()) && validatePhoneNumber(smsMessage.getTargetPhoneNumber())){
             System.out.println("Sending a SMS from " + smsMessage.getSourcePhoneNumber() + " to " + smsMessage.getTargetPhoneNumber() + " with content : " + smsMessage.getContent());
         }else{
             throw new IllegalArgumentException("Phone Number is Not Correct!");
         }
-    }
-
-    @Override
-    public void sendEmailMessage(EmailMessage emailMessage) {
-        //Empty Body!
-    }
-
-    @Override
-    public void sendTelegramMessage(TelegramMessage telegramMessage) {
-        //Empty Body!
     }
 
     private boolean validatePhoneNumber(String phoneNumber) {
